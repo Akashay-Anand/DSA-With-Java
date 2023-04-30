@@ -6,7 +6,7 @@ package Leetcode;
 public class L02_AddTwoNo {
 }
 
-class Solution {
+class Solution1 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode ans = new ListNode();
         ListNode itrate = ans;
