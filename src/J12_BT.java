@@ -1,4 +1,5 @@
 // we basicaly uses linked-list with one extra pointer; where head points to the root node 
+import java.util.*;
 class NodeBT {
 	int key;
 	NodeBT left, right;
@@ -91,6 +92,29 @@ NULL NULL
         // now deal with the node
         System.out.print(node.key + " ");
     }
+    
+/* Given a binary tree. Print its nodes in  
+       level order using array for implementing queue */
+    void printLevelOrder(NodeBT root) 
+    { 
+        Queue<NodeBT> queue = new LinkedList<NodeBT>(); 
+        queue.add(root); 
+        while (!queue.isEmpty()) 
+        { 
+            NodeBT tempNode = queue.poll(); 
+            System.out.print(tempNode.key + " "); 
+
+            /* Enqueue left child */
+            if (tempNode.left != null) { 
+                queue.add(tempNode.left); 
+            } 
+
+            /* Enqueue right child */
+            if (tempNode.right != null) { 
+                queue.add(tempNode.right); 
+            } 
+        } 
+    } 
 }
 
 

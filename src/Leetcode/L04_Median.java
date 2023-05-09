@@ -3,7 +3,7 @@ package Leetcode;
 public class L04_Median {
     
 }
-class Solution {
+class Solution1 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int l1 = nums1.length;
         int l2 = nums2.length;
@@ -26,8 +26,7 @@ class Solution {
 		        else new_arr[n--] = nums2[l2--];
 		    }
             if(n2%2 != 0) return new_arr[n2/2] ;
-            else return (new_arr[(n2/2)-1]+new_arr[n2/2])/2.0;
-                
-            } 
+            else return (new_arr[(n2/2)-1]+new_arr[n2/2])/2.0;                
+        } 
     }
 }
