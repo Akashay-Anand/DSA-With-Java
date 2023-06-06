@@ -3,11 +3,11 @@ import java.util.*;
 
 public class J07_StringsQus {
     public static void main(String[] args) {
-        // String s1 = "hello";
-        // String s2 = "ehlol";
-        // // Anagram(s1, s2);
-        // // ReverseStr();
-        FindPattern();
+        String s1 = "hello";
+        String s2 = "ehlol";
+        Anagram(s1, s2);
+        // ReverseStr();
+        // FindPattern();
 
         // String str = "AABAACAADAABAAABAA";
         // String ptr = "AABA";
