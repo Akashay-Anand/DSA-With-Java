@@ -1,15 +1,15 @@
-// import java.util.Arrays;
-// import java.util.Collections;
+import java.util.Arrays;
+import java.util.Collections;
 public class J05_Sorting {
     public static void main(String[] args) {
-        // int[] arr = {13, 7, 6, 45, 21, 9, 2, 100};
-        // Integer[] arr2 = {13, 7, 6, 45, 21, 9, 2, 100};
+        int[] arr = {13, 7, 6, 45, 21, 9, 2, 100};
+        Integer[] arr2 = {13, 7, 6, 45, 21, 9, 2, 100};
         // Arrays.sort(arr); // sort array
-        // Arrays.sort(arr,1,4); // sort subarray;
+        // Arrays.sort(arr,1,4); // sort subarray; // end is not included
         // Sorts arr[] in descending order
-        // Arrays.sort(arr2,Collections.reverseOrder());
+        Arrays.sort(arr2,Collections.reverseOrder());
 
-        // System.out.printf("Modified arr[] : %s", Arrays.toString(arr));
+        System.out.printf("Modified arr[] : %s", Arrays.toString(arr));
     }
 // 1 ; Insertion Sort // TC: O(n^2)
     static void Insertion_sort(int[] arr){
@@ -31,15 +31,21 @@ public class J05_Sorting {
         int n = arr.length;
         int temp = 0;
         for(int i=0;i<n-1;i++){
+            boolean isSwap = false;
             for(int j = 0; j<n-i-1;j++){
                 if(arr[j]>arr[j+1]){
                     temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
+
+                    isSwap = true;
                 }
             }
+
+            if(!isSwap) break;
         }
     }
+
 // 3 ; Selection Sort // TC: O(n^2)
     static void Selection_Sort(int[] arr){
         int min_idx =0, n = arr.length;

@@ -109,7 +109,7 @@ public class J00_Maths {
 
 // 6 GCD
     static void GCD_of_2no(int a,int b){
-        // method 1 brute force 
+        // method 1 brute force
         int temp = (a>b)?b:a;
         while(temp>0){
             if(a%temp ==0 && b%temp == 0) break;
